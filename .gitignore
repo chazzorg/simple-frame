@@ -1,0 +1,17 @@
+/node_modules
+/logs/*
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+.DS_Store
+.vscode
+.editorconfig
+/.idea
+.idea
+.svn
+Thumbs.db
+_ide_helper.php
+composer.lock
