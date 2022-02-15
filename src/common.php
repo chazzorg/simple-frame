@@ -27,7 +27,11 @@ $dotenv = Dotenv::createImmutable(CODE_PATH);
 $dotenv->load();
 
 // 初始化日志
-$logHandler = new CLogFileHandler(config('app.log.path') . date('Y-m-d') . '.log');
+if(RUN_IN == 'CMD'){
+    $logHandler = new CLogFileHandler(config('app.log.path') . date('Y-m-d') . '.cmd.log');
+}else{
+    $logHandler = new CLogFileHandler(config('app.log.path') . date('Y-m-d') . '.http.log');
+}
 Log::Init($logHandler, config('app.log.level'));
 
 // 错误报告新显示

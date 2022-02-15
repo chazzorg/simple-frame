@@ -1,5 +1,8 @@
 <?php
 
+// 应用入口
+define('RUN_IN', 'HTTP');
+
 //加载composer组件
 require __DIR__ ."/vendor/autoload.php";
 
